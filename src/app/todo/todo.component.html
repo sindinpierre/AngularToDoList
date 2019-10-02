@@ -1,0 +1,14 @@
+<div class="toDoBox">
+    <input type="checkbox"
+        [checked]="text.isEnd"
+          class="todo-checkbox"
+          (click)="completeItem()"/>
+            <span class="todo-text"
+                  [ngClass]="{'todo-isEnd': text.isEnd}">
+                {{ text.text }}
+            </span>
+
+    <button class="button" (click)="removeItem()">
+      remove
+    </button>
+  </div>

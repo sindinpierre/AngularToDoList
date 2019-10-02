@@ -1,0 +1,5 @@
+<input class="addToDo" #inputelementRef
+    [value]="text"
+    (keyup.enter)="changeValue($event.target.value)"
+    placeholder="ajouter une chose a faire">
+<input type="button" id="bouttonValider" value="Ajouter" (click)="changeValue(inputelementRef.value)">

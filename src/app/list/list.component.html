@@ -1,0 +1,12 @@
+<app-button (send)="add($event)"></app-button>
+<div id="listBox">
+    <ul>
+        <li *ngFor="let toDo of list">
+            <app-todo [text]="toDo"
+            (removeToDo)="remove($event)"
+            (updateToDo)="update($event.text, $event.changes)"></app-todo>
+        </li>
+    </ul>
+</div>
+
+
